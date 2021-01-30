@@ -22,8 +22,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ github.ref }}
-      - name: my project test
-        run: echo test
+      - name: create docker image
+        run: docker build -t samle_image_name -f ./Dockerfile .
+      - name: run docker container test
+        run: docker run -t samle_image_name bin/sh -c "echo myproject deploy"
   deploy:
     # if: contains( github.ref, 'master')
     runs-on: ubuntu-latest
@@ -33,5 +35,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ github.ref }}
-      - name: hogehoge deploy
-        run: echo deploy
+      - name: create docker image
+        run: docker build -t samle_image_name -f ./Dockerfile .
+      - name: run docker container deploy
+        run: docker run -t samle_image_name bin/sh -c "echo hogehoge deploy"
