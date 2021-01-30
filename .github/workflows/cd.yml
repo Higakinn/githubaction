@@ -9,7 +9,7 @@ on: #GitHub Actionのトリガーを設定
 jobs:
   cd-docker: #ジョブ名
     runs-on: ubuntu-latest #実行環境(Ubuntuの最新版環境で実行)
-    name: run docker in github action sample
+    name: run docker in github action cd sample
     steps: #実行処理やコマンドを記述
       - name: git checkout my branch
         uses: actions/checkout@v2
