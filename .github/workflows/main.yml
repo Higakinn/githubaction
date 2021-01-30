@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: run docker in github action sample
+    steps:
+      - name: git checkout my branch
+        uses: actions/hello-world-docker-action@v1
+      # Use the output from the `hello` step
+      - name: docker run command
+        run: docker run -it --rm python:3.7-alpine sh -c "echo hetto"
