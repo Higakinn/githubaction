@@ -11,9 +11,9 @@ jobs:
         with:
           ref: ${{ github.ref }}
       - name: create docker image
-        run: docker build -t SampleImageName -f ./Dockerfile .
+        run: docker build -t samle_image_name -f ./Dockerfile .
       - name: run docker container
-        run: docker run -t SampleImageName bin/sh -c "echo run container"
+        run: docker run -t samle_image_name bin/sh -c "echo run container"
   test:
     runs-on: ubuntu-latest
     needs: [lint]
