@@ -1,10 +1,10 @@
 # Continuous Delivery
 name: Continuous Delivery # ワークフロー名
 
-on: #GitHub Actionのトリガーを設定
-  push:
-    branches:
-      - main
+on:
+  push #GitHub Actionのトリガーを設定
+  # branches:
+  #   - main
 
 jobs:
   cd-docker: #ジョブ名
