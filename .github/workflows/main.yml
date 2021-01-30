@@ -10,4 +10,4 @@ jobs:
       - name: git checkout my branch
         uses: actions/checkout@v2
       - name: docker run command
-        run: docker run -t --rm python:3.7-alpine sh -c "echo hetto"
+        run: docker run -t --rm python:3.7-alpine sh -c "echo hello"
